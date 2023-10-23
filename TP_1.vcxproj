@@ -127,14 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dyhovie.cpp" />
     <ClCompile Include="Keeper.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Orchestra.cpp" />
+    <ClCompile Include="Strune.cpp" />
+    <ClCompile Include="Ydar.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Dyhovie.h" />
     <ClInclude Include="Keeper.h" />
     <ClInclude Include="libra.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="Orchestra.h" />
+    <ClInclude Include="Strune.h" />
+    <ClInclude Include="Ydar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
