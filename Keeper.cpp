@@ -12,12 +12,12 @@
 
 using namespace std;
 
-Keep::Keep() : size(0), head(nullptr) {}
-Keep::Keep(int size) : head(nullptr)
+Keeper::Keeper() : size(0), head(nullptr) {}
+Keeper::Keeper(int size) : head(nullptr)
 {
 	this->size = size;
 }
-Keep::~Keep()
+Keeper::~Keeper()
 {
 	if (head != NULL)
 	{
@@ -33,7 +33,7 @@ Keep::~Keep()
 		delete(head);
 	}
 }
-Orchestra* Keep::operator[] (const int id)
+Orchestra* Keeper::operator[] (const int id)
 {
 	if ((id >= size) || id < 0)
 	{
@@ -50,11 +50,11 @@ Orchestra* Keep::operator[] (const int id)
 		return (buffer->data);
 	}
 }
-int Keep::get_size()
+int Keeper::get_size()
 {
 	return size;
 }
-void Keep::insert(Orchestra* new_data)
+void Keeper::insert(Orchestra* new_data)
 {
 	El* tmp;
 	tmp = new El;
@@ -72,7 +72,7 @@ void Keep::insert(Orchestra* new_data)
 	}
 	head = tmp;
 }
-void Keep::remove(int id)
+void Keeper::remove(int id)
 {
 	if ((head != NULL) && (id < size) && (id >= 0))
 	{
@@ -95,7 +95,7 @@ void Keep::remove(int id)
 		size--;
 	}
 }
-void Keep::save()
+void Keeper::save()
 {
 	ofstream outfile;
 	string initfile = "data.txt";
@@ -117,7 +117,7 @@ void Keep::save()
 		buffer = buffer->next;
 	}
 }
-void Keep::load() {
+void Keeper::load() {
 	if (size != 0)
 	{
 		El* buffer;

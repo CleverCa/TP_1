@@ -4,16 +4,16 @@
 using namespace std;
 using namespace std;
 
-class Keep 
+class Keeper
 {
 private:
 	int size = 0;
 	El* head = NULL;
 
 public:
-	Keep();
-	Keep(int size);
-	~Keep();
+	Keeper();
+	Keeper(int size);
+	~Keeper();
 
 	Orchestra* operator[] (int id);
 
