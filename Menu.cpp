@@ -140,8 +140,8 @@ void Menu::add_new()
 		break;
 
 	case 2:
-		Bike * teacher;
-		teacher = new Bike;
+		Ydar * teacher;
+		teacher = new Ydar;
 		orchestrs = teacher;
 		teacher->rewrite();
 		list.insert(orchestrs);
@@ -149,11 +149,11 @@ void Menu::add_new()
 		break;
 
 	case 3:
-		Bus * emp;
-		emp = new Bus;
-		transports = emp;
+		Strune * emp;
+		emp = new Strune;
+		orchestrs = emp;
 		emp->rewrite();
-		list.insert(transports);
+		list.insert(orchestrs);
 		cout << "Новый автобус был добавлен." << endl;
 		break;
 
