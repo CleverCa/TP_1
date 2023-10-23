@@ -24,9 +24,6 @@
     <ClCompile Include="Keeper.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Orchestra.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Ydar.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>

@@ -131,7 +131,6 @@
     <ClCompile Include="Keeper.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="Orchestra.cpp" />
     <ClCompile Include="Strune.cpp" />
     <ClCompile Include="Ydar.cpp" />
   </ItemGroup>
