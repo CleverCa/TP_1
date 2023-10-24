@@ -7,11 +7,11 @@ using namespace std;
 class Ydar : public Orchestra
 {
 private:
-	string stamp;
-	string nazvanie;
-	string cost;
-	string kolvo_instr;
-	string FIO;
+	string stamp; //Тип
+	string nazvanie; //Название
+	string cost; //Стоимость
+	string kolvo_instr; //Количество инструментов в оркестре
+	string FIO; //ФИО владельца
 
 public:
 	Ydar();

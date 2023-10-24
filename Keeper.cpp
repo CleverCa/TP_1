@@ -169,10 +169,10 @@ void Keeper::load()
 			Dyhovie* dyh;
 			dyh = new Dyhovie;
 			dyh->set_stamp(a);
-			dyh->set_cost(b);
-			dyh->set_FIO(c);
-			dyh->set_kolvo_instr(d);
-			dyh->set_name_proz(e);
+			dyh->set_cost(c);
+			dyh->set_FIO(d);
+			dyh->set_kolvo_instr(e);
+			dyh->set_name_proz(b);
 			dyh->set_defect(f);
 			Orchestra = dyh;
 			insert(Orchestra);
@@ -196,7 +196,6 @@ void Keeper::load()
 			strune->set_cost_instr(d);
 			strune->set_kolvo_instr(e);
 			strune->set_text(f);
-
 			Orchestra = strune;
 			insert(Orchestra);
 		}

@@ -2,15 +2,19 @@
 #include <fstream>
 #include <string>
 #include "Dyhovie.h"
+
 using namespace std;
+
 Dyhovie::Dyhovie()
 {
 	cout << "Конструктор без аттрибутов" << endl;
 }
+
 Dyhovie::~Dyhovie()
 {
 	cout << "Деструктор" << endl;
 }
+
 Dyhovie::Dyhovie(const Dyhovie& Dyhovie_copy)
 {
 	stamp = Dyhovie_copy.stamp;
@@ -21,11 +25,13 @@ Dyhovie::Dyhovie(const Dyhovie& Dyhovie_copy)
 	defect = Dyhovie_copy.defect;
 	cout << "Конструктор осуществлен успешно" << endl;
 }
+
 Dyhovie::Dyhovie(string stamp)
 {
 	this->stamp = stamp;
 	cout << "Конструтор Dyhovie с атрибутами" << endl;
 }
+
 string Dyhovie::get_stamp() const
 {
 	return stamp;

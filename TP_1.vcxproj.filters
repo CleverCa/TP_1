@@ -38,9 +38,6 @@
     <ClInclude Include="Menu.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="libra.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Keeper.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -54,6 +51,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Strune.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="libra.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

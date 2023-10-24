@@ -60,15 +60,15 @@ void Menu::show_all_orchestrs()
 {
 	try
 	{
-		if (list.get_size() == 0)
+		if (list.get_size() == 0) //Необходим для храниения всех обьектов
 		{
 			throw "Список инструментов пуст";
 		}
-		for (int i = 0; i < list.get_size(); i++)
+		for (int i = 0; i < list.get_size(); i++) 
 		{
 			cout << "_" << endl;
 			cout << i + 1 << "|";
-			list[i]->show();
+			list[i]->show(); //Идет с базового класса, берем конкретный обьект для показа данных функцией show
 		}
 	}
 	catch (const char* ex) { cout << ex << endl; }
@@ -80,7 +80,7 @@ void Menu::change_data()
 	try
 	{
 		cout << "Выберете инструмент, данные которого вы поменяете(от 1 до " << list.get_size() << ")?" << endl;
-		cin >> c2;
+		cin >> c2; //Для выбора строчки
 		if ((c2 < 1) || (c2 > list.get_size()))
 		{
 			throw "Неправильный ввод";
@@ -97,10 +97,9 @@ void Menu::change_data()
 			bool fl = false;
 			while (fl == false)
 			{
-				try
+				try 
 				{
 					getline(cin, redact);
-					//float f = stof(redact);
 					fl = true;
 				}
 				catch (...)
@@ -136,8 +135,8 @@ void Menu::add_new()
 		Ydar * ydar;
 		ydar = new Ydar;
 		orchestrs = ydar;
-		ydar->rewrite();
-		list.insert(orchestrs);
+		ydar->rewrite(); //Перезаписываем
+		list.insert(orchestrs); //Добавляем в список
 		cout << "Новый инструмент(ударные) был добавлен." << endl;
 		break;
 

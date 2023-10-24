@@ -2,9 +2,10 @@
 
 #include "Orchestra.h"
 using namespace std;
-class Strune : public Orchestra 
+class Strune : public Orchestra //модификатор транспорта
 {
 private:
+	//Данные об инструменте
 	string stamp;
 	string FIO;
 	string name_proz;
@@ -13,13 +14,15 @@ private:
 	string text;
 
 public:
-	Strune();
+	//Все конструкторы для обьекта
+	Strune(); 
 	~Strune();
 	Strune(const Strune& Strune_copy);
 	Strune(string stamp);
 
-	string get_stamp() const;
-	void set_stamp(string name_ch);
+	//Задавать или брать значения из класса 
+	string get_stamp() const;  //Брать
+	void set_stamp(string name_ch);  //Задавать
 	string get_FIO() const;
 	void set_FIO(string FIO_ch);
 	string get_name_proz() const;

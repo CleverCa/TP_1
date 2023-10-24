@@ -15,7 +15,7 @@ Strune::~Strune()
 	cout << "Деконструктор" << endl;
 }
 
-Strune::Strune(const Strune& Strune_copy)
+Strune::Strune(const Strune& Strune_copy) //Конструктор с копированием
 {
 	stamp = Strune_copy.stamp;
 	FIO = Strune_copy.FIO;
@@ -23,6 +23,7 @@ Strune::Strune(const Strune& Strune_copy)
 	cost_instr = Strune_copy.cost_instr;
 	kolvo_instr = Strune_copy.kolvo_instr;
 	text = Strune_copy.text;
+
 	cout << "Конструктор вызван." << endl;
 }
 
@@ -39,7 +40,7 @@ string Strune::get_stamp() const
 
 void Strune::set_stamp(string name_ch)
 {
-	stamp = name_ch;
+	stamp = name_ch; //Задаем
 }
 
 string Strune::get_FIO() const
@@ -95,7 +96,7 @@ void Strune::set_text(string text)
 void Strune::show()
 {
 	cout << "------------------------------------" << endl;
-	cout << "Инструмент: Духовые" << endl;
+	cout << "Инструмент: Струнные" << endl;
 	cout << "Название: " << stamp << endl;
 	cout << "ФИО владельца: " << FIO << endl;
 	cout << "Наименование производителя инструмента: " << name_proz << endl;
@@ -108,7 +109,7 @@ void Strune::show()
 void Strune::rewrite()
 {
 	cout << "------------------------------------" << endl;
-	cout << "Инструмент: Струнный" << endl;
+	cout << "Инструмент: Струнные" << endl;
 	cout << "Введите название: ";
 	getline(cin, stamp);
 	getline(cin, stamp);
@@ -159,7 +160,7 @@ void Strune::redact_str(int num_str, string red_str)
 		this->kolvo_instr = red_str;
 		break;
 	case 6:
-		this->text = red_str;
+		this->text = red_str; //this - показывать конкретное на что мы заменяем
 		break;
 	default:
 		cout << "Неправильный ввод" << endl;

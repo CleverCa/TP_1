@@ -37,7 +37,7 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	setlocale(LC_ALL, "Rus");
-	Menu menu;
+	Menu menu; //Класс меню(там определяем функции)
 	menu.main_menu();
 	return 0;
 }
