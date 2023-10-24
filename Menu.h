@@ -1,11 +1,15 @@
 #pragma once
 
-#include "libra.h"
+#include <iostream>
+#include <fstream>
+#include "Keeper.h"
+#include "Orchestra.h"
+
 class Menu 
 {
 protected:
 	Keeper list;
-	Orchestra* orchestra;
+	Orchestra* orchestrs;
 	string redact;
 	int exit = 1;
 
@@ -19,5 +23,4 @@ public:
 	void load_from_file();
 	void delete_orchestrs();
 	void exit_from_programm();
-	void average();
 };

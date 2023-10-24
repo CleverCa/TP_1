@@ -18,6 +18,7 @@ Dyhovie::Dyhovie(const Dyhovie& Dyhovie_copy)
 	engineVol = Dyhovie_copy.engineVol;
 	enginePower = Dyhovie_copy.enginePower;
 	locale = Dyhovie_copy.locale;
+	defect = Dyhovie_copy.defect;
 	cout << "Конструктор осуществлен успешно" << endl;
 }
 Dyhovie::Dyhovie(string stamp)
@@ -65,32 +66,43 @@ void Dyhovie::set_locale(string locale_ch)
 {
 	locale = locale_ch;
 }
+string Dyhovie::get_defect() const
+{
+	return defect;
+}
+void Dyhovie::set_defect(string defect_ch)
+{
+	defect = defect_ch;
+}
 void Dyhovie::show()
 {
 	cout << "------------------------------------" << endl;
-	cout << "Транспорт: Dyhovie" << endl;
-	cout << "Модель(Stamp): " << stamp << endl;
-	cout << "Марка(Mark): " << mark << endl;
-	cout << "Объем двигателя(EngineVol): " << engineVol << endl;
-	cout << "Мощность двигателя(EnginePower): " << enginePower << endl;
-	cout << "Местность(Locale): " << locale << endl;
+	cout << "Инструмент: Духовые" << endl;
+	cout << "Название инструмента: " << stamp << endl;
+	cout << "Наименование производителя инструмента: " << mark << endl;
+	cout << "Стоимость инструмента: " << engineVol << endl;
+	cout << "ФИО владельца: " << enginePower << endl;
+	cout << "Количество единиц в оркестре: " << locale << endl;
+	cout << "Какие есть дефекты присутствуют в инструменте: " << defect << endl;
 	cout << "------------------------------------" << endl;
 }
 void Dyhovie::rewrite()
 {
 	cout << "------------------------------------" << endl;
-	cout << "Dyhovie: " << endl;
-	cout << "Введите модель: ";
+	cout << "Духовые: " << endl;
+	cout << "Введите название: ";
 	getline(cin, stamp);
 	getline(cin, stamp);
-	cout << "Введите марку: ";
+	cout << "Введите наименование производителя: ";
 	getline(cin, mark);
-	cout << "Введите объем двигателя: ";
+	cout << "Введите стоимость инструмента: ";
 	getline(cin, engineVol);
-	cout << "Введите мощность двигателя: ";
+	cout << "Введите ФИО владельца: ";
 	getline(cin, enginePower);
-	cout << "Введите местность, по которой мотоцик предназначен: ";
+	cout << "Введите количество единиц в оркестре: ";
 	getline(cin, locale);
+	cout << "Введите дефекты, которые присутствуют в инструменте: ";
+	getline(cin, defect);
 	cout << "------------------------------------" << endl;
 }
 void Dyhovie::saving()
@@ -105,7 +117,7 @@ void Dyhovie::saving()
 	}
 	else
 	{
-		outfile << 2 << endl << stamp << endl << mark << endl << engineVol << endl << enginePower << endl << locale << endl;
+		outfile << 1 << endl << stamp << endl << mark << endl << engineVol << endl << enginePower << endl << locale << endl << defect << endl;
 		outfile.close();
 	}
 }
@@ -127,6 +139,9 @@ void Dyhovie::redact_str(int num_str, string red_str)
 		break;
 	case 5:
 		this->locale = red_str;
+		break;
+	case 6:
+		this->defect = red_str;
 		break;
 	default:
 		cout << "Неправильный ввод" << endl;

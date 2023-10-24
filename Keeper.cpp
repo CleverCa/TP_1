@@ -1,5 +1,3 @@
-#include "libra.h"
-
 #include <iostream>
 #include <locale>
 #include <Windows.h>
@@ -13,10 +11,12 @@
 using namespace std;
 
 Keeper::Keeper() : size(0), head(nullptr) {}
+
 Keeper::Keeper(int size) : head(nullptr)
 {
 	this->size = size;
 }
+
 Keeper::~Keeper()
 {
 	if (head != NULL)
@@ -33,6 +33,7 @@ Keeper::~Keeper()
 		delete(head);
 	}
 }
+
 Orchestra* Keeper::operator[] (const int id)
 {
 	if ((id >= size) || id < 0)
@@ -50,10 +51,12 @@ Orchestra* Keeper::operator[] (const int id)
 		return (buffer->data);
 	}
 }
+
 int Keeper::get_size()
 {
 	return size;
 }
+
 void Keeper::insert(Orchestra* new_data)
 {
 	El* tmp;
@@ -72,6 +75,7 @@ void Keeper::insert(Orchestra* new_data)
 	}
 	head = tmp;
 }
+
 void Keeper::remove(int id)
 {
 	if ((head != NULL) && (id < size) && (id >= 0))
@@ -95,6 +99,7 @@ void Keeper::remove(int id)
 		size--;
 	}
 }
+
 void Keeper::save()
 {
 	ofstream outfile;
@@ -117,7 +122,9 @@ void Keeper::save()
 		buffer = buffer->next;
 	}
 }
-void Keeper::load() {
+
+void Keeper::load()
+{
 	if (size != 0)
 	{
 		El* buffer;
@@ -131,17 +138,20 @@ void Keeper::load() {
 		head->data->~Orchestra();
 		delete(head);
 	}
+
 	ifstream infile;
 	int read_size, num_Orchestra;
-	string a, b, c, d, e;
+	string a, b, c, d, e, f;
 	string initfile = "data.txt";
 	Orchestra* Orchestra;
 	infile.open(initfile);
+
 	if (!infile.is_open())
 	{
 		cout << "Error opening!" << endl;
 		exit(1);
 	}
+
 	infile >> read_size;
 	for (int i = 0; i < read_size; i++)
 	{
@@ -150,38 +160,43 @@ void Keeper::load() {
 
 		if (num_Orchestra == 1)
 		{
-			//infile >> a >> b >> c >> d >> e;
+			//infile >> a >> b >> c >> d >> e >> f;
 			getline(infile, a);
 			getline(infile, b);
 			getline(infile, c);
 			getline(infile, d);
 			getline(infile, e);
 			Dyhovie* dyh;
-			dyh = new dyh;
+			dyh = new Dyhovie;
 			dyh->set_stamp(a);
 			dyh->set_engineVol(b);
-			dyh->set_color(c);
-			dyh->set_typeKPP(d);
+			dyh->set_enginePower(c);
+			dyh->set_locale(d);
 			dyh->set_mark(e);
+			dyh->set_defect(f);
 			Orchestra = dyh;
 			insert(Orchestra);
 		}
 
 		if (num_Orchestra == 2)
 		{
-			//infile >> a >> b >> c >> d >> e;
+			//infile >> a >> b >> c >> d >> e >> f;
 			getline(infile, a);
 			getline(infile, b);
 			getline(infile, c);
 			getline(infile, d);
 			getline(infile, e);
+			getline(infile, f);
+
 			Strune* strune;
-			strune = new strune;
+			strune = new Strune;
 			strune->set_stamp(a);
 			strune->set_mark(b);
-			strune->set_engineVol(c);
-			strune->set_enginePower(d);
-			strune->set_locale(e);
+			strune->set_number_seats(c);
+			strune->set_number_passengers(d);
+			strune->set_terminal_st(e);
+			strune->set_text(f);
+
 			Orchestra = strune;
 			insert(Orchestra);
 		}
@@ -198,10 +213,11 @@ void Keeper::load() {
 			ydar = new Ydar;
 			ydar->set_stamp(a);
 			ydar->set_mark(b);
-			ydar->set_number_seats(c);
-			ydar->set_number_passengers(d);
-			ydar->set_terminal_st(e);
+			ydar->set_engineVol(c);
+			ydar->set_color(d);
+			ydar->set_typeKPP(e);
 			Orchestra = ydar;
 			insert(Orchestra);
 		}
 	}
+}

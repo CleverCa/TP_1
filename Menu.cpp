@@ -42,6 +42,7 @@ void Menu::main_menu()
 		}
 	}
 }
+
 int Menu::show_options() {
 	int c1;
 	cout << "\nКакое действие выполнить?" << endl;
@@ -56,6 +57,7 @@ int Menu::show_options() {
 	cin >> c1;
 	return c1;
 }
+
 void Menu::show_all_orchestrs()
 {
 	try
@@ -73,6 +75,7 @@ void Menu::show_all_orchestrs()
 	}
 	catch (const char* ex) { cout << ex << endl; }
 }
+
 void Menu::change_data()
 {
 	int c2, c3;
@@ -118,6 +121,7 @@ void Menu::change_data()
 	}
 	catch (const char* ex) { cout << ex << endl; }
 }
+
 void Menu::add_new()
 {
 	int c2;
@@ -133,9 +137,9 @@ void Menu::add_new()
 	case 1:
 		Dyhovie * dyh;
 		dyh = new Dyhovie;
-		orchestra = dyh;
+		orchestrs = dyh;
 		dyh->rewrite();
-		list.insert(orchestra);
+		list.insert(orchestrs);
 		cout << "Новый автомобиль был добавлен." << endl;
 		break;
 
@@ -161,6 +165,7 @@ void Menu::add_new()
 		break;
 	}
 }
+
 void Menu::save_to_file()
 {
 	try
@@ -174,6 +179,7 @@ void Menu::save_to_file()
 	}
 	catch (const char* ex) { cout << ex << endl; }
 }
+
 void Menu::load_from_file()
 {
 	try
@@ -183,6 +189,7 @@ void Menu::load_from_file()
 	}
 	catch (const char* ex) { cout << ex << endl; }
 }
+
 void Menu::delete_orchestrs()
 {
 	int c2;
@@ -210,7 +217,14 @@ void Menu::delete_orchestrs()
 		cout << i << endl;
 	}
 }
+
 void Menu::exit_from_programm()
 {
 	exit = 0;
 }
+
+void Menu::average()
+{
+}
+
+

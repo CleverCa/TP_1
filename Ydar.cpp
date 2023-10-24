@@ -74,28 +74,28 @@ void Ydar::set_typeKPP(string course_ch)
 void Ydar::show()
 {
 	cout << "------------------------------------" << endl;
-	cout << "Данный транспорт: Ydar" << endl;
-	cout << "Модель(Stamp): " << stamp << endl;
-	cout << "Марка(Mark): " << mark << endl;
-	cout << "Объем двигателя(Engine Volume): " << engineVol << endl;
-	cout << "Цвет(Color): " << color << endl;
-	cout << "Тип КПП(TypeKPP): " << typeKPP << endl;
+	cout << "Инструмент: Ударные" << endl;
+	cout << "Тип: " << stamp << endl;
+	cout << "Название: " << mark << endl;
+	cout << "Стоимость: " << engineVol << endl;
+	cout << "Количество единиц в оркестре: " << color << endl;
+	cout << "ФИО владельца: " << typeKPP << endl;
 	cout << "------------------------------------" << endl;
 }
 void Ydar::rewrite()
 {
 	cout << "------------------------------------" << endl;
-	cout << "Данный транспорт: Ydar" << endl;
-	cout << "Введите новую марку: ";
+	cout << "Инструмент: Ударные" << endl;
+	cout << "Введите тип: ";
 	getline(cin, stamp);
 	getline(cin, stamp);
-	cout << "Введите новую марку: ";
+	cout << "Введите название: ";
 	getline(cin, mark);
-	cout << "Введите новый объем двигателя: ";
+	cout << "Введите стоимость: ";
 	getline(cin, engineVol);
-	cout << "Введите новый цвет: ";
+	cout << "Введите колтчество единиц в оркестре: ";
 	getline(cin, color);
-	cout << "Введите новый тип КПП: ";
+	cout << "Введите ФИО владельца: ";
 	getline(cin, typeKPP);
 	cout << "------------------------------------" << endl;
 }
@@ -109,8 +109,7 @@ void Ydar::saving()
 		cout << "Ошибка открытия!" << endl;
 		exit(1);
 	}
-	outfile << 1 << endl << stamp << endl << engineVol << endl << color << endl << typeKPP
-		<< endl << mark << endl;
+	outfile << 3 << endl << stamp << endl << engineVol << endl << color << endl << typeKPP << endl << mark << endl;
 	outfile.close();
 }
 void Ydar::redact_str(int num_str, string red_str)

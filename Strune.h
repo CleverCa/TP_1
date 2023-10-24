@@ -10,11 +10,14 @@ private:
 	string number_seats;
 	string number_passengers;
 	string terminal_st;
+	string text;
+
 public:
 	Strune();
 	~Strune();
 	Strune(const Strune& Strune_copy);
 	Strune(string stamp);
+
 	string get_stamp() const;
 	void set_stamp(string name_ch);
 	string get_mark() const;
@@ -25,6 +28,10 @@ public:
 	void set_number_passengers(string number_passengers_ch);
 	string get_terminal_st() const;
 	void set_terminal_st(string terminal_st_ch);
+	string get_text() const;
+	void set_text(string terminal_st_ch);
+
+
 	virtual void show();
 	virtual void rewrite();
 	virtual void saving();

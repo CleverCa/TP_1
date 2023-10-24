@@ -12,6 +12,7 @@ private:
 	string engineVol;
 	string enginePower;
 	string locale;
+	string defect;
 
 public:
 	Dyhovie();
@@ -28,6 +29,9 @@ public:
 	void set_enginePower(string enginePower_ch);
 	string get_locale() const;
 	void set_locale(string locale_ch);
+	string get_defect() const;
+	void set_defect(string defect_ch);
+
 	virtual void show();
 	virtual void rewrite();
 	virtual void saving();
