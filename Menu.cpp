@@ -1,5 +1,3 @@
-#include "libra.h"
-
 #include <iostream>
 #include <locale>
 #include <Windows.h>
@@ -7,8 +5,8 @@
 #include <string>
 #include "Menu.h"
 #include "Ydar.h"
-#include "Strune.h"
 #include "Dyhovie.h"
+#include "Strune.h"
 
 using namespace std;
 
@@ -46,12 +44,12 @@ void Menu::main_menu()
 int Menu::show_options() {
 	int c1;
 	cout << "\nКакое действие выполнить?" << endl;
-	cout << "1 - Показать весь транспорт" << endl;
-	cout << "2 - Изменить данные о транспорте" << endl;
-	cout << "3 - Добавить новый транспорт" << endl;
+	cout << "1 - Показать все инструменты" << endl;
+	cout << "2 - Изменить данные о инструменте" << endl;
+	cout << "3 - Добавить новый инструмент" << endl;
 	cout << "4 - Сохранить все изменения в файле" << endl;
-	cout << "5 - Загрузить из файла данные о транспорте" << endl;
-	cout << "6 - Удалить транспорт" << endl;
+	cout << "5 - Загрузить из файла данные о инструментах" << endl;
+	cout << "6 - Удалить инструмент" << endl;
 	cout << "0 - Выход из программы" << endl;
 	cout << "-> ";
 	cin >> c1;
@@ -64,7 +62,7 @@ void Menu::show_all_orchestrs()
 	{
 		if (list.get_size() == 0)
 		{
-			throw "Список транспортных средств пуст";
+			throw "Список инструментов пуст";
 		}
 		for (int i = 0; i < list.get_size(); i++)
 		{
@@ -81,7 +79,7 @@ void Menu::change_data()
 	int c2, c3;
 	try
 	{
-		cout << "Выберете транспорт, данные которого вы поменяете(от 1 до " << list.get_size() << ")?" << endl;
+		cout << "Выберете инструмент, данные которого вы поменяете(от 1 до " << list.get_size() << ")?" << endl;
 		cin >> c2;
 		if ((c2 < 1) || (c2 > list.get_size()))
 		{
@@ -135,19 +133,19 @@ void Menu::add_new()
 	switch (c2)
 	{
 	case 1:
-		Dyhovie * dyh;
-		dyh = new Dyhovie;
-		orchestrs = dyh;
-		dyh->rewrite();
+		Ydar * ydar;
+		ydar = new Ydar;
+		orchestrs = ydar;
+		ydar->rewrite();
 		list.insert(orchestrs);
 		cout << "Новый автомобиль был добавлен." << endl;
 		break;
 
 	case 2:
-		Ydar * teacher;
-		teacher = new Ydar;
-		orchestrs = teacher;
-		teacher->rewrite();
+		Dyhovie * dyh;
+		dyh = new Dyhovie;
+		orchestrs = dyh;
+		dyh->rewrite();
 		list.insert(orchestrs);
 		cout << "Новый мотоцикл был добавлен." << endl;
 		break;
@@ -160,7 +158,6 @@ void Menu::add_new()
 		list.insert(orchestrs);
 		cout << "Новый автобус был добавлен." << endl;
 		break;
-
 	default:
 		break;
 	}
@@ -222,9 +219,3 @@ void Menu::exit_from_programm()
 {
 	exit = 0;
 }
-
-void Menu::average()
-{
-}
-
-

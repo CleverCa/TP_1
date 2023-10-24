@@ -2,7 +2,8 @@
 
 using namespace std;
 
-class Orchestra {
+class Orchestra 
+{
 public:
 	Orchestra() {};
 	virtual ~Orchestra() {};

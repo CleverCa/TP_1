@@ -5,7 +5,7 @@
 #include "Keeper.h"
 #include "Orchestra.h"
 
-class Menu 
+class Menu
 {
 protected:
 	Keeper list;
