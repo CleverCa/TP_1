@@ -88,9 +88,9 @@ string Strune::get_text() const
 	return text;
 }
 
-void Strune::set_text(string text)
+void Strune::set_text(string text_ch)
 {
-	text = text;
+	text = text_ch;
 }
 
 void Strune::show()

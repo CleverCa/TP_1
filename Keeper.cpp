@@ -166,6 +166,8 @@ void Keeper::load()
 			getline(infile, c);
 			getline(infile, d);
 			getline(infile, e);
+			getline(infile, f);
+
 			Dyhovie* dyh;
 			dyh = new Dyhovie;
 			dyh->set_stamp(a);
