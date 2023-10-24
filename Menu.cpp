@@ -123,10 +123,10 @@ void Menu::change_data()
 void Menu::add_new()
 {
 	int c2;
-	cout << "\nКакой транспорт вы хотите добавить?" << endl;
-	cout << "1 - Car" << endl;
-	cout << "2 - Bike" << endl;
-	cout << "3 - Bus" << endl;
+	cout << "\nКакой инструмент вы хотите добавить?" << endl;
+	cout << "1 - Ударные" << endl;
+	cout << "2 - Духовые" << endl;
+	cout << "3 - Струнные" << endl;
 	cout << "0 - Назад" << endl;
 	cout << "-> ";
 	cin >> c2;
@@ -138,7 +138,7 @@ void Menu::add_new()
 		orchestrs = ydar;
 		ydar->rewrite();
 		list.insert(orchestrs);
-		cout << "Новый автомобиль был добавлен." << endl;
+		cout << "Новый инструмент(ударные) был добавлен." << endl;
 		break;
 
 	case 2:
@@ -147,7 +147,7 @@ void Menu::add_new()
 		orchestrs = dyh;
 		dyh->rewrite();
 		list.insert(orchestrs);
-		cout << "Новый мотоцикл был добавлен." << endl;
+		cout << "Новый инструмент(духовые) был добавлен." << endl;
 		break;
 
 	case 3:
@@ -156,7 +156,7 @@ void Menu::add_new()
 		orchestrs = emp;
 		emp->rewrite();
 		list.insert(orchestrs);
-		cout << "Новый автобус был добавлен." << endl;
+		cout << "Новый инструмент(струнные) был добавлен." << endl;
 		break;
 	default:
 		break;
@@ -190,8 +190,7 @@ void Menu::load_from_file()
 void Menu::delete_orchestrs()
 {
 	int c2;
-	cout << "Какой траснспорт вы хотите удалить(от 1 до " << list.get_size() << ")?" <<
-		endl;
+	cout << "Какой инструмент вы хотите удалить(от 1 до " << list.get_size() << ")?" << endl;
 	for (int i = 0; i < list.get_size(); i++)
 	{
 		cout << "_" << endl;
@@ -207,7 +206,7 @@ void Menu::delete_orchestrs()
 			throw "Неправильный ввод";
 		}
 		list.remove(c2 - 1);
-		cout << "Данный транспорт был удален" << endl;
+		cout << "Данный инструмент был удален" << endl;
 	}
 	catch (const char* i)
 	{
