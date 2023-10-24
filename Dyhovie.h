@@ -8,10 +8,10 @@ class Dyhovie : public Orchestra
 {
 private:
 	string stamp;
-	string mark;
-	string engineVol;
-	string enginePower;
-	string locale;
+	string name_proz;
+	string cost;
+	string FIO;
+	string kolvo_instr;
 	string defect;
 
 public:
@@ -21,14 +21,14 @@ public:
 	Dyhovie(string stamp);
 	string get_stamp() const;
 	void set_stamp(string name_ch);
-	string get_mark() const;
-	void set_mark(string mark_ch);
-	string get_engineVol() const;
-	void set_engineVol(string engineVol_ch);
-	string get_enginePower() const;
-	void set_enginePower(string enginePower_ch);
-	string get_locale() const;
-	void set_locale(string locale_ch);
+	string get_name_proz() const;
+	void set_name_proz(string name_proz_ch);
+	string get_cost() const;
+	void set_cost(string cost_ch);
+	string get_FIO() const;
+	void set_FIO(string FIO_ch);
+	string get_kolvo_instr() const;
+	void set_kolvo_instr(string kolvo_instr_ch);
 	string get_defect() const;
 	void set_defect(string defect_ch);
 

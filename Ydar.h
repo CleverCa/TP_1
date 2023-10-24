@@ -8,10 +8,10 @@ class Ydar : public Orchestra
 {
 private:
 	string stamp;
-	string mark;
-	string engineVol;
-	string color;
-	string typeKPP;
+	string nazvanie;
+	string cost;
+	string kolvo_instr;
+	string FIO;
 
 public:
 	Ydar();
@@ -21,14 +21,14 @@ public:
 
 	string get_stamp() const;
 	void set_stamp(string stamp_ch);
-	string get_mark() const;
-	void set_mark(string mark_ch);
-	string get_engineVol() const;
-	void set_engineVol(string engineVol_ch);
-	string get_color() const;
-	void set_color(string color_ch);
-	string get_typeKPP() const;
-	void set_typeKPP(string typeKPP_ch);
+	string get_nazvanie() const;
+	void set_nazvanie(string nazvanie_ch);
+	string get_cost() const;
+	void set_cost(string cost_ch);
+	string get_kolvo_instr() const;
+	void set_kolvo_instr(string kolvo_instr_ch);
+	string get_FIO() const;
+	void set_FIO(string FIO_ch);
 
 	virtual void show();
 	virtual void rewrite();

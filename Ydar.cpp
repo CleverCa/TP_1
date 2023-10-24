@@ -20,10 +20,10 @@ Ydar::~Ydar()
 Ydar::Ydar(const Ydar& Ydar_copy)
 {
 	stamp = Ydar_copy.stamp;
-	mark = Ydar_copy.mark;
-	engineVol = Ydar_copy.engineVol;
-	color = Ydar_copy.color;
-	typeKPP = Ydar_copy.typeKPP;
+	nazvanie = Ydar_copy.nazvanie;
+	cost = Ydar_copy.cost;
+	kolvo_instr = Ydar_copy.kolvo_instr;
+	FIO = Ydar_copy.FIO;
 	cout << "Конструктор Ydar был вызван успешно" << endl;
 }
 Ydar::Ydar(string stamp)
@@ -39,47 +39,47 @@ void Ydar::set_stamp(string stamp_ch)
 {
 	stamp = stamp_ch;
 }
-string Ydar::get_mark() const
+string Ydar::get_nazvanie() const
 {
-	return mark;
+	return nazvanie;
 }
-void Ydar::set_mark(string mark_ch)
+void Ydar::set_nazvanie(string nazvanie_ch)
 {
-	mark = mark_ch;
+	nazvanie = nazvanie_ch;
 }
-string Ydar::get_engineVol() const
+string Ydar::get_cost() const
 {
-	return engineVol;
+	return cost;
 }
-void Ydar::set_engineVol(string engineVol_ch)
+void Ydar::set_cost(string cost_ch)
 {
-	engineVol = engineVol_ch;
+	cost = cost_ch;
 }
-string Ydar::get_color() const
+string Ydar::get_kolvo_instr() const
 {
-	return color;
+	return kolvo_instr;
 }
-void Ydar::set_color(string color_ch)
+void Ydar::set_kolvo_instr(string kolvo_instr_ch)
 {
-	color = color_ch;
+	kolvo_instr = kolvo_instr_ch;
 }
-string Ydar::get_typeKPP() const
+string Ydar::get_FIO() const
 {
-	return typeKPP;
+	return FIO;
 }
-void Ydar::set_typeKPP(string course_ch)
+void Ydar::set_FIO(string FIO_ch)
 {
-	typeKPP = course_ch;
+	FIO = FIO_ch;
 }
 void Ydar::show()
 {
 	cout << "------------------------------------" << endl;
 	cout << "Инструмент: Ударные" << endl;
 	cout << "Тип: " << stamp << endl;
-	cout << "Название: " << mark << endl;
-	cout << "Стоимость: " << engineVol << endl;
-	cout << "Количество единиц в оркестре: " << color << endl;
-	cout << "ФИО владельца: " << typeKPP << endl;
+	cout << "Название: " << nazvanie << endl;
+	cout << "Стоимость: " << cost << endl;
+	cout << "Количество единиц в оркестре: " << kolvo_instr << endl;
+	cout << "ФИО владельца: " << FIO << endl;
 	cout << "------------------------------------" << endl;
 }
 void Ydar::rewrite()
@@ -90,13 +90,13 @@ void Ydar::rewrite()
 	getline(cin, stamp);
 	getline(cin, stamp);
 	cout << "Введите название: ";
-	getline(cin, mark);
+	getline(cin, nazvanie);
 	cout << "Введите стоимость: ";
-	getline(cin, engineVol);
+	getline(cin, cost);
 	cout << "Введите колтчество единиц в оркестре: ";
-	getline(cin, color);
+	getline(cin, kolvo_instr);
 	cout << "Введите ФИО владельца: ";
-	getline(cin, typeKPP);
+	getline(cin, FIO);
 	cout << "------------------------------------" << endl;
 }
 void Ydar::saving()
@@ -109,7 +109,7 @@ void Ydar::saving()
 		cout << "Ошибка открытия!" << endl;
 		exit(1);
 	}
-	outfile << 3 << endl << stamp << endl << engineVol << endl << color << endl << typeKPP << endl << mark << endl;
+	outfile << 3 << endl << stamp << endl << cost << endl << kolvo_instr << endl << FIO << endl << nazvanie << endl;
 	outfile.close();
 }
 void Ydar::redact_str(int num_str, string red_str)
@@ -120,16 +120,16 @@ void Ydar::redact_str(int num_str, string red_str)
 		this->stamp = red_str;
 		break;
 	case 2:
-		this->mark = red_str;
+		this->nazvanie = red_str;
 		break;
 	case 3:
-		this->engineVol = red_str; this->color = red_str;
+		this->cost = red_str; 
 		break;
 	case 4:
-		this->color = red_str;
+		this->kolvo_instr = red_str;
 		break;
 	case 5:
-		this->typeKPP = red_str;
+		this->FIO = red_str;
 		break;
 	default:
 		throw "Неккоректный ввод данных!";

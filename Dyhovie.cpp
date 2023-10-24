@@ -14,10 +14,10 @@ Dyhovie::~Dyhovie()
 Dyhovie::Dyhovie(const Dyhovie& Dyhovie_copy)
 {
 	stamp = Dyhovie_copy.stamp;
-	mark = Dyhovie_copy.mark;
-	engineVol = Dyhovie_copy.engineVol;
-	enginePower = Dyhovie_copy.enginePower;
-	locale = Dyhovie_copy.locale;
+	name_proz = Dyhovie_copy.name_proz;
+	cost = Dyhovie_copy.cost;
+	FIO = Dyhovie_copy.FIO;
+	kolvo_instr = Dyhovie_copy.kolvo_instr;
 	defect = Dyhovie_copy.defect;
 	cout << "Конструктор осуществлен успешно" << endl;
 }
@@ -34,37 +34,37 @@ void Dyhovie::set_stamp(string stamp_ch)
 {
 	stamp = stamp_ch;
 }
-string Dyhovie::get_mark() const
+string Dyhovie::get_name_proz() const
 {
-	return mark;
+	return name_proz;
 }
-void Dyhovie::set_mark(string mark_ch)
+void Dyhovie::set_name_proz(string name_proz_ch)
 {
-	mark = mark_ch;
+	name_proz = name_proz_ch;
 }
-string Dyhovie::get_engineVol() const
+string Dyhovie::get_cost() const
 {
-	return engineVol;
+	return cost;
 }
-void Dyhovie::set_engineVol(string engineVol_ch)
+void Dyhovie::set_cost(string engineVol_ch)
 {
-	engineVol = engineVol_ch;
+	cost = engineVol_ch;
 }
-string Dyhovie::get_enginePower() const
+string Dyhovie::get_FIO() const
 {
-	return enginePower;
+	return FIO;
 }
-void Dyhovie::set_enginePower(string enginePower_ch)
+void Dyhovie::set_FIO(string enginePower_ch)
 {
-	enginePower = enginePower_ch;
+	FIO = enginePower_ch;
 }
-string Dyhovie::get_locale() const
+string Dyhovie::get_kolvo_instr() const
 {
-	return locale;
+	return kolvo_instr;
 }
-void Dyhovie::set_locale(string locale_ch)
+void Dyhovie::set_kolvo_instr(string kolvo_instr_ch)
 {
-	locale = locale_ch;
+	kolvo_instr = kolvo_instr_ch;
 }
 string Dyhovie::get_defect() const
 {
@@ -79,10 +79,10 @@ void Dyhovie::show()
 	cout << "------------------------------------" << endl;
 	cout << "Инструмент: Духовые" << endl;
 	cout << "Название инструмента: " << stamp << endl;
-	cout << "Наименование производителя инструмента: " << mark << endl;
-	cout << "Стоимость инструмента: " << engineVol << endl;
-	cout << "ФИО владельца: " << enginePower << endl;
-	cout << "Количество единиц в оркестре: " << locale << endl;
+	cout << "Наименование производителя инструмента: " << name_proz << endl;
+	cout << "Стоимость инструмента: " << cost << endl;
+	cout << "ФИО владельца: " << FIO << endl;
+	cout << "Количество единиц в оркестре: " << kolvo_instr << endl;
 	cout << "Какие есть дефекты присутствуют в инструменте: " << defect << endl;
 	cout << "------------------------------------" << endl;
 }
@@ -94,13 +94,13 @@ void Dyhovie::rewrite()
 	getline(cin, stamp);
 	getline(cin, stamp);
 	cout << "Введите наименование производителя: ";
-	getline(cin, mark);
+	getline(cin, name_proz);
 	cout << "Введите стоимость инструмента: ";
-	getline(cin, engineVol);
+	getline(cin, cost);
 	cout << "Введите ФИО владельца: ";
-	getline(cin, enginePower);
+	getline(cin, FIO);
 	cout << "Введите количество единиц в оркестре: ";
-	getline(cin, locale);
+	getline(cin, kolvo_instr);
 	cout << "Введите дефекты, которые присутствуют в инструменте: ";
 	getline(cin, defect);
 	cout << "------------------------------------" << endl;
@@ -117,7 +117,7 @@ void Dyhovie::saving()
 	}
 	else
 	{
-		outfile << 1 << endl << stamp << endl << mark << endl << engineVol << endl << enginePower << endl << locale << endl << defect << endl;
+		outfile << 1 << endl << stamp << endl << name_proz << endl << cost << endl << FIO << endl << kolvo_instr << endl << defect << endl;
 		outfile.close();
 	}
 }
@@ -129,16 +129,16 @@ void Dyhovie::redact_str(int num_str, string red_str)
 		this->stamp = red_str;
 		break;
 	case 2:
-		this->mark = red_str;
+		this->name_proz = red_str;
 		break;
 	case 3:
-		this->engineVol = red_str;
+		this->cost = red_str;
 		break;
 	case 4:
-		this->enginePower = red_str;
+		this->FIO = red_str;
 		break;
 	case 5:
-		this->locale = red_str;
+		this->kolvo_instr = red_str;
 		break;
 	case 6:
 		this->defect = red_str;

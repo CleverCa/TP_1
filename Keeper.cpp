@@ -169,10 +169,10 @@ void Keeper::load()
 			Dyhovie* dyh;
 			dyh = new Dyhovie;
 			dyh->set_stamp(a);
-			dyh->set_engineVol(b);
-			dyh->set_enginePower(c);
-			dyh->set_locale(d);
-			dyh->set_mark(e);
+			dyh->set_cost(b);
+			dyh->set_FIO(c);
+			dyh->set_kolvo_instr(d);
+			dyh->set_name_proz(e);
 			dyh->set_defect(f);
 			Orchestra = dyh;
 			insert(Orchestra);
@@ -191,10 +191,10 @@ void Keeper::load()
 			Strune* strune;
 			strune = new Strune;
 			strune->set_stamp(a);
-			strune->set_mark(b);
-			strune->set_number_seats(c);
-			strune->set_number_passengers(d);
-			strune->set_terminal_st(e);
+			strune->set_FIO(b);
+			strune->set_name_proz(c);
+			strune->set_cost_instr(d);
+			strune->set_kolvo_instr(e);
 			strune->set_text(f);
 
 			Orchestra = strune;
@@ -212,10 +212,10 @@ void Keeper::load()
 			Ydar* ydar;
 			ydar = new Ydar;
 			ydar->set_stamp(a);
-			ydar->set_mark(b);
-			ydar->set_engineVol(c);
-			ydar->set_color(d);
-			ydar->set_typeKPP(e);
+			ydar->set_nazvanie(b);
+			ydar->set_cost(c);
+			ydar->set_kolvo_instr(d);
+			ydar->set_FIO(e);
 			Orchestra = ydar;
 			insert(Orchestra);
 		}

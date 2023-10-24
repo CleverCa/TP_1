@@ -6,10 +6,10 @@ class Strune : public Orchestra
 {
 private:
 	string stamp;
-	string mark;
-	string number_seats;
-	string number_passengers;
-	string terminal_st;
+	string FIO;
+	string name_proz;
+	string cost_instr;
+	string kolvo_instr;
 	string text;
 
 public:
@@ -20,14 +20,14 @@ public:
 
 	string get_stamp() const;
 	void set_stamp(string name_ch);
-	string get_mark() const;
-	void set_mark(string mark_ch);
-	string get_number_seats() const;
-	void set_number_seats(string number_seats_ch);
-	string get_number_passengers() const;
-	void set_number_passengers(string number_passengers_ch);
-	string get_terminal_st() const;
-	void set_terminal_st(string terminal_st_ch);
+	string get_FIO() const;
+	void set_FIO(string FIO_ch);
+	string get_name_proz() const;
+	void set_name_proz(string name_proz_ch);
+	string get_cost_instr() const;
+	void set_cost_instr(string cost_instr_ch);
+	string get_kolvo_instr() const;
+	void set_kolvo_instr(string kolvo_instr_ch);
 	string get_text() const;
 	void set_text(string terminal_st_ch);
 
@@ -36,5 +36,5 @@ public:
 	virtual void rewrite();
 	virtual void saving();
 	virtual void redact_str(int num_str, string red_str);
-	virtual bool avermark(double a) { return false; };
+	virtual bool averFIO(double a) { return false; };
 };

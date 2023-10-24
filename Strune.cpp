@@ -18,10 +18,10 @@ Strune::~Strune()
 Strune::Strune(const Strune& Strune_copy)
 {
 	stamp = Strune_copy.stamp;
-	mark = Strune_copy.mark;
-	number_seats = Strune_copy.number_seats;
-	number_passengers = Strune_copy.number_passengers;
-	terminal_st = Strune_copy.terminal_st;
+	FIO = Strune_copy.FIO;
+	name_proz = Strune_copy.name_proz;
+	cost_instr = Strune_copy.cost_instr;
+	kolvo_instr = Strune_copy.kolvo_instr;
 	text = Strune_copy.text;
 	cout << "Конструктор вызван." << endl;
 }
@@ -42,44 +42,44 @@ void Strune::set_stamp(string name_ch)
 	stamp = name_ch;
 }
 
-string Strune::get_mark() const
+string Strune::get_FIO() const
 {
-	return mark;
+	return FIO;
 }
 
-void Strune::set_mark(string mark_ch)
+void Strune::set_FIO(string FIO_ch)
 {
-	mark = mark_ch;
+	FIO = FIO_ch;
 }
 
-string Strune::get_number_seats() const
+string Strune::get_name_proz() const
 {
-	return number_seats;
+	return name_proz;
 }
 
-void Strune::set_number_seats(string number_seats_ch)
+void Strune::set_name_proz(string name_proz_ch)
 {
-	number_seats = number_seats_ch;
+	name_proz = name_proz_ch;
 }
 
-string Strune::get_number_passengers() const
+string Strune::get_cost_instr() const
 {
-	return number_passengers;
+	return cost_instr;
 }
 
-void Strune::set_number_passengers(string number_passengers_ch)
+void Strune::set_cost_instr(string cost_instr_ch)
 {
-	number_passengers = number_passengers_ch;
+	cost_instr = cost_instr_ch;
 }
 
-string Strune::get_terminal_st() const
+string Strune::get_kolvo_instr() const
 {
-	return terminal_st;
+	return kolvo_instr;
 }
 
-void Strune::set_terminal_st(string terminal_st_ch)
+void Strune::set_kolvo_instr(string kolvo_instr_ch)
 {
-	terminal_st = terminal_st_ch;
+	kolvo_instr = kolvo_instr_ch;
 }
 
 string Strune::get_text() const
@@ -97,10 +97,10 @@ void Strune::show()
 	cout << "------------------------------------" << endl;
 	cout << "Инструмент: Духовые" << endl;
 	cout << "Название: " << stamp << endl;
-	cout << "ФИО владельца: " << mark << endl;
-	cout << "Наименование производителя инструмента: " << number_seats << endl;
-	cout << "Стоимость инструмента: " << number_passengers << endl;
-	cout << "Количество единиц в оркестре: " << terminal_st << endl;
+	cout << "ФИО владельца: " << FIO << endl;
+	cout << "Наименование производителя инструмента: " << name_proz << endl;
+	cout << "Стоимость инструмента: " << cost_instr << endl;
+	cout << "Количество единиц в оркестре: " << kolvo_instr << endl;
 	cout << "Краткое текстовое описание инструмента: " << text << endl;
 	cout << "------------------------------------" << endl;
 }
@@ -113,13 +113,13 @@ void Strune::rewrite()
 	getline(cin, stamp);
 	getline(cin, stamp);
 	cout << "Введите ФИО владельца: ";
-	getline(cin, mark);
+	getline(cin, FIO);
 	cout << "Введите наименование производителя инструмента: ";
-	getline(cin, number_seats);
+	getline(cin, name_proz);
 	cout << "Введите стоимость инструмента: ";
-	getline(cin, number_passengers);
+	getline(cin, cost_instr);
 	cout << "Введите количество единиц в оркестре: ";
-	getline(cin, terminal_st);
+	getline(cin, kolvo_instr);
 	cout << "Введите краткое описание инструмента: ";
 	getline(cin, text);
 	cout << "------------------------------------" << endl;
@@ -135,7 +135,7 @@ void Strune::saving()
 		cout << "Error!" << endl;
 		exit(1);
 	}
-	outfile << 2 << endl << stamp << endl << mark << endl << number_seats << endl << number_passengers << endl << terminal_st << endl << text << endl;
+	outfile << 2 << endl << stamp << endl << FIO << endl << name_proz << endl << cost_instr << endl << kolvo_instr << endl << text << endl;
 	outfile.close();
 }
 
@@ -147,16 +147,16 @@ void Strune::redact_str(int num_str, string red_str)
 		this->stamp = red_str;
 		break;
 	case 2:
-		this->mark = red_str;
+		this->FIO = red_str;
 		break;
 	case 3:
-		this->number_seats = red_str;
+		this->name_proz = red_str;
 		break;
 	case 4:
-		this->number_passengers = red_str;
+		this->cost_instr = red_str;
 		break;
 	case 5:
-		this->terminal_st = red_str;
+		this->kolvo_instr = red_str;
 		break;
 	case 6:
 		this->text = red_str;
