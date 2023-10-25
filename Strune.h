@@ -2,7 +2,7 @@
 
 #include "Orchestra.h"
 using namespace std;
-class Strune : public Orchestra //модификатор транспорта
+class Strune : public Orchestra //модификатор оркестра
 {
 private:
 	//Данные об инструменте

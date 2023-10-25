@@ -19,6 +19,7 @@ public:
 	~Dyhovie();
 	Dyhovie(const Dyhovie& Dyhovie_copy);
 	Dyhovie(string stamp);
+
 	string get_stamp() const;
 	void set_stamp(string name_ch);
 	string get_name_proz() const;
