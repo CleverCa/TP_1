@@ -14,7 +14,7 @@ protected:
 	int exit = 1;
 
 public:
-	void main_menu(); //
+	void main_menu(); 
 	int show_options(); //Отдельная функция для меню
 	void show_all_orchestrs(); //Покакзать весь оркестр
 	void change_data(); //Изменить данные

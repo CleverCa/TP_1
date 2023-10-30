@@ -7,12 +7,12 @@ using namespace std;
 
 Dyhovie::Dyhovie()
 {
-	cout << "Конструктор без аттрибутов" << endl;
+	//cout << "Конструктор без аттрибутов" << endl;
 }
 
 Dyhovie::~Dyhovie()
 {
-	cout << "Деструктор" << endl;
+	//cout << "Деструктор" << endl;
 }
 
 Dyhovie::Dyhovie(const Dyhovie& Dyhovie_copy)
@@ -23,13 +23,13 @@ Dyhovie::Dyhovie(const Dyhovie& Dyhovie_copy)
 	FIO = Dyhovie_copy.FIO;
 	kolvo_instr = Dyhovie_copy.kolvo_instr;
 	defect = Dyhovie_copy.defect;
-	cout << "Конструктор осуществлен успешно" << endl;
+	//cout << "Конструктор осуществлен успешно" << endl;
 }
 
 Dyhovie::Dyhovie(string stamp)
 {
 	this->stamp = stamp;
-	cout << "Конструтор Dyhovie с атрибутами" << endl;
+	//cout << "Конструтор Dyhovie с атрибутами" << endl;
 }
 
 string Dyhovie::get_stamp() const

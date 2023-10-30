@@ -9,12 +9,12 @@ using namespace std;
 
 Ydar::Ydar()
 {
-	cout << "Конструктор без аттрибутов" << endl; 
+	//cout << "Конструктор без аттрибутов" << endl; 
 }
 
 Ydar::~Ydar()
 {
-	cout << "Деструктор" << endl; 
+	//cout << "Деструктор" << endl; 
 }
 
 Ydar::Ydar(const Ydar& Ydar_copy)
@@ -24,13 +24,13 @@ Ydar::Ydar(const Ydar& Ydar_copy)
 	cost = Ydar_copy.cost;
 	kolvo_instr = Ydar_copy.kolvo_instr;
 	FIO = Ydar_copy.FIO;
-	cout << "Конструктор Ydar был вызван успешно" << endl; 
+	//cout << "Конструктор Ydar был вызван успешно" << endl; 
 }
 
 Ydar::Ydar(string stamp)
 {
 	this->stamp = stamp;
-	cout << "Конструтор Ydar с атрибутами" << endl; 
+	//cout << "Конструтор Ydar с атрибутами" << endl; 
 }
 
 string Ydar::get_stamp() const

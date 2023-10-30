@@ -53,9 +53,6 @@
     <ClInclude Include="Strune.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="libra.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="data.txt">

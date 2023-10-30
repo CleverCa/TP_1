@@ -137,7 +137,6 @@
   <ItemGroup>
     <ClInclude Include="Dyhovie.h" />
     <ClInclude Include="Keeper.h" />
-    <ClInclude Include="libra.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Orchestra.h" />
     <ClInclude Include="Strune.h" />

@@ -7,12 +7,12 @@ using namespace std;
 
 Strune::Strune()
 {
-	cout << "Конструктор без параметров вызван" << endl;
+	//cout << "Конструктор без параметров вызван" << endl;
 }
 
 Strune::~Strune()
 {
-	cout << "Деконструктор" << endl;
+	//cout << "Деконструктор" << endl;
 }
 
 Strune::Strune(const Strune& Strune_copy) //Конструктор с копированием
@@ -24,13 +24,13 @@ Strune::Strune(const Strune& Strune_copy) //Конструктор с копированием
 	kolvo_instr = Strune_copy.kolvo_instr;
 	text = Strune_copy.text;
 
-	cout << "Конструктор вызван." << endl;
+	//cout << "Конструктор вызван." << endl;
 }
 
 Strune::Strune(string stamp)
 {
 	this->stamp = stamp;
-	cout << "Конструктор вызван" << endl;
+	//cout << "Конструктор вызван" << endl;
 }
 
 string Strune::get_stamp() const
